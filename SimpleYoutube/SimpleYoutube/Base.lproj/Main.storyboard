@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gWs-Uw-h7B">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ejU-tx-4SJ">
+            <objects>
+                <navigationController id="gWs-Uw-h7B" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fJ1-hR-1p9">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0zQ-Lc-TEk" kind="relationship" relationship="rootViewController" id="FZR-re-cn0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GlV-cP-H3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="-21"/>
+        </scene>
+        <!--mainView-->
+        <scene sceneID="U2x-f1-2qX">
+            <objects>
+                <viewController title="mainView" id="0zQ-Lc-TEk" customClass="ViewController" customModule="SimpleYoutube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="daF-g1-mzm">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KOP-nc-Hb0">
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" id="ltu-D6-Had">
+                                <rect key="frame" x="185" y="405" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kp8-if-T1X"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KOP-nc-Hb0" firstAttribute="top" secondItem="kp8-if-T1X" secondAttribute="top" id="EWI-dn-ONw"/>
+                            <constraint firstItem="kp8-if-T1X" firstAttribute="trailing" secondItem="KOP-nc-Hb0" secondAttribute="trailing" id="Y8r-72-HCt"/>
+                            <constraint firstItem="KOP-nc-Hb0" firstAttribute="leading" secondItem="kp8-if-T1X" secondAttribute="leading" id="hRr-JO-xLS"/>
+                            <constraint firstItem="kp8-if-T1X" firstAttribute="bottom" secondItem="KOP-nc-Hb0" secondAttribute="bottom" id="tj6-qU-Nx2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KHN-Yy-A0c"/>
+                    <connections>
+                        <outlet property="IndicatorView" destination="ltu-D6-Had" id="fUu-Z4-JJY"/>
+                        <outlet property="mainTableView" destination="KOP-nc-Hb0" id="LJR-97-exy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hlq-Pr-HB2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="-21"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
