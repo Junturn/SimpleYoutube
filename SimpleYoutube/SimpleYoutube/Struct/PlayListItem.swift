@@ -8,7 +8,7 @@
 import Foundation
 
 struct PlayList: Codable {
-    let nextPageToken: String
+    let nextPageToken: String?
     let items:[Item]
 }
 

@@ -13,6 +13,7 @@ class VideoPlayerViewModel {
     private var nextPageToken: String?
     private var htmlDataString: String = ""
     private var commentInfo: [CommetInfo] = []
+    private var withoutData: Bool = false
     var alreadyInit: Bool = false
     
     // MARK -- closure Action
@@ -63,10 +64,15 @@ extension VideoPlayerViewModel {
     }
     
     func fetchComments(count: Int) {
+        if withoutData {
+            NSLog("已經沒有其他留言了", "")
+            return
+        }
         YoutubeAPI().fetchComments(count, videoID: infoModel?.videoID, token: nextPageToken, completion: {result in
             switch result {
-            case .success(let(token, infoArray)):
+            case .success(let(token, infoArray, anyData)):
                 DispatchQueue.main.async {
+                    self.withoutData = anyData
                     self.nextPageToken = token
                     self.commentInfo += infoArray
                     self.reloadTableView?()

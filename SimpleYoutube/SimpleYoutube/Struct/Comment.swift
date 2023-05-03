@@ -8,7 +8,7 @@
 import Foundation
 
 struct Comment: Codable {
-    let nextPageToken: String
+    let nextPageToken: String?
     let items: [ItemComment]
 }
 

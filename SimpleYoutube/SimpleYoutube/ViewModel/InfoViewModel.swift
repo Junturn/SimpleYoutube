@@ -10,6 +10,7 @@ import UIKit
 
 class InfoViewModel {
     private var infoModel: InfoModel?
+    private var withoutData: Bool = false
     
     var nextPageToken: String?
     var isSearch:Bool = false
@@ -69,19 +70,22 @@ extension InfoViewModel {
     }
     
     func fetchYoutubeData(_ count:Int) {
+        if withoutData {
+            return
+        }
         if count == 20 {
             self.showIndicator?()
         }
         
         YoutubeAPI().fetchYoutubeData(count, nextPageToken: nextPageToken, completion: { result in
             switch result {
-                case .success(let (token, listArray)):
+                case .success(let (token, listArray, withoutData)):
+                    self.withoutData = withoutData
                     self.nextPageToken = token
                     for item in listArray {
                         self.contentInfoArray.append(item)
                     }
                     self.downloadImage()
-                    
                 
                 case .failure(let error):
                     print(error)

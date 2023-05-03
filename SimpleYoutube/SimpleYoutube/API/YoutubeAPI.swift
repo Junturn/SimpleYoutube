@@ -38,7 +38,7 @@ class YoutubeAPI: NSObject {
         }
     }
 
-    func fetchYoutubeData(_ count:Int, nextPageToken: String?, completion: ((Result<(token:String, listArray:[InfoModel]), Error>) -> Void)?) {
+    func fetchYoutubeData(_ count:Int, nextPageToken: String?, completion: ((Result<(token:String, listArray:[InfoModel], withoutData: Bool), Error>) -> Void)?) {
         var urlString = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails,status&playlistId=\(playListID)&key=\(apiKey)&maxResults=\(count)"
         if nextPageToken != nil {
             urlString = String.init(format: "%@&pageToken=%@", urlString, nextPageToken!)
@@ -60,7 +60,7 @@ class YoutubeAPI: NSObject {
                                                           videoID: item.snippet.resourceId.videoId)
                                     dataArray.append(info)
                                 }
-                                completion?(.success((playListItem.nextPageToken, dataArray)))
+                                completion?(.success((playListItem.nextPageToken ?? "", dataArray, playListItem.nextPageToken == nil)))
                                 
                             } catch {
                                 completion?(.failure(error))
@@ -94,7 +94,7 @@ class YoutubeAPI: NSObject {
                     }
     }
     
-    func fetchComments(_ count: Int, videoID: String?, token: String?, completion:((Result<(token:String, infoArray:[CommetInfo]), Error>) -> Void)?) {
+    func fetchComments(_ count: Int, videoID: String?, token: String?, completion:((Result<(token:String, infoArray:[CommetInfo], withoutData: Bool), Error>) -> Void)?) {
         var urlString = "https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet,replies&videoId=\(videoID ?? "")&key=\(apiKey)&maxResults=\(count)"
         
         if token != nil {
@@ -117,7 +117,7 @@ class YoutubeAPI: NSObject {
                                     dataArray.append(info)
                                     
                                 }
-                                completion?(.success((comment.nextPageToken, dataArray)))
+                                completion?(.success((comment.nextPageToken ?? "", dataArray, comment.nextPageToken == nil)))
                                 
                             } catch {
                                 completion?(.failure(error))

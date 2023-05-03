@@ -10,6 +10,7 @@
 		726BA76D86BB4308427BA2D6 /* Pods_SimpleYoutube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F560084B441AB9DC46A5F48 /* Pods_SimpleYoutube.framework */; };
 		ED23116529D415EE007201E5 /* VideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23116429D415EE007201E5 /* VideoInfo.swift */; };
 		ED3F18A32A02271C0077777D /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3F18A22A02271C0077777D /* VideoPlayerViewModel.swift */; };
+		ED3F18AD2A0244450077777D /* SimpleYoutubeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3F18AC2A0244450077777D /* SimpleYoutubeTests.swift */; };
 		ED448A6C29D31353001C5BA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED448A6B29D31353001C5BA8 /* AppDelegate.swift */; };
 		ED448A6E29D31353001C5BA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED448A6D29D31353001C5BA8 /* SceneDelegate.swift */; };
 		ED448A7029D31353001C5BA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED448A6F29D31353001C5BA8 /* ViewController.swift */; };
@@ -32,12 +33,24 @@
 		ED8C98F829D6A47400997B43 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C98F729D6A47400997B43 /* Path.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		ED3F18AE2A0244450077777D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED448A6029D31353001C5BA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED448A6729D31353001C5BA8;
+			remoteInfo = SimpleYoutube;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		307D83254ECDD6FBA3588AD8 /* Pods-SimpleYoutube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleYoutube.debug.xcconfig"; path = "Target Support Files/Pods-SimpleYoutube/Pods-SimpleYoutube.debug.xcconfig"; sourceTree = "<group>"; };
 		8E6179F26752A437220C8839 /* Pods-SimpleYoutube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleYoutube.release.xcconfig"; path = "Target Support Files/Pods-SimpleYoutube/Pods-SimpleYoutube.release.xcconfig"; sourceTree = "<group>"; };
 		9F560084B441AB9DC46A5F48 /* Pods_SimpleYoutube.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleYoutube.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED23116429D415EE007201E5 /* VideoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoInfo.swift; sourceTree = "<group>"; };
 		ED3F18A22A02271C0077777D /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
+		ED3F18AA2A0244450077777D /* SimpleYoutubeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleYoutubeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED3F18AC2A0244450077777D /* SimpleYoutubeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleYoutubeTests.swift; sourceTree = "<group>"; };
 		ED448A6829D31353001C5BA8 /* SimpleYoutube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleYoutube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED448A6B29D31353001C5BA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED448A6D29D31353001C5BA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +76,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		ED3F18A72A0244450077777D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ED448A6529D31353001C5BA8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -91,10 +111,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		ED3F18AB2A0244450077777D /* SimpleYoutubeTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED3F18AC2A0244450077777D /* SimpleYoutubeTests.swift */,
+			);
+			path = SimpleYoutubeTests;
+			sourceTree = "<group>";
+		};
 		ED448A5F29D31353001C5BA8 = {
 			isa = PBXGroup;
 			children = (
 				ED448A6A29D31353001C5BA8 /* SimpleYoutube */,
+				ED3F18AB2A0244450077777D /* SimpleYoutubeTests */,
 				ED448A6929D31353001C5BA8 /* Products */,
 				BC4418E5DA32CC8770FF1261 /* Pods */,
 				224396604110C6524F73B223 /* Frameworks */,
@@ -105,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				ED448A6829D31353001C5BA8 /* SimpleYoutube.app */,
+				ED3F18AA2A0244450077777D /* SimpleYoutubeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,6 +220,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		ED3F18A92A0244450077777D /* SimpleYoutubeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED3F18B02A0244450077777D /* Build configuration list for PBXNativeTarget "SimpleYoutubeTests" */;
+			buildPhases = (
+				ED3F18A62A0244450077777D /* Sources */,
+				ED3F18A72A0244450077777D /* Frameworks */,
+				ED3F18A82A0244450077777D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED3F18AF2A0244450077777D /* PBXTargetDependency */,
+			);
+			name = SimpleYoutubeTests;
+			productName = SimpleYoutubeTests;
+			productReference = ED3F18AA2A0244450077777D /* SimpleYoutubeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		ED448A6729D31353001C5BA8 /* SimpleYoutube */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED448A7C29D31353001C5BA8 /* Build configuration list for PBXNativeTarget "SimpleYoutube" */;
@@ -219,6 +267,10 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					ED3F18A92A0244450077777D = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = ED448A6729D31353001C5BA8;
+					};
 					ED448A6729D31353001C5BA8 = {
 						CreatedOnToolsVersion = 14.0;
 					};
@@ -238,11 +290,19 @@
 			projectRoot = "";
 			targets = (
 				ED448A6729D31353001C5BA8 /* SimpleYoutube */,
+				ED3F18A92A0244450077777D /* SimpleYoutubeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		ED3F18A82A0244450077777D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ED448A6629D31353001C5BA8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,6 +360,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		ED3F18A62A0244450077777D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED3F18AD2A0244450077777D /* SimpleYoutubeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ED448A6429D31353001C5BA8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,6 +394,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		ED3F18AF2A0244450077777D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED448A6729D31353001C5BA8 /* SimpleYoutube */;
+			targetProxy = ED3F18AE2A0244450077777D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		ED448A7129D31353001C5BA8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -346,6 +422,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		ED3F18B12A0244450077777D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jim.hsu.SimpleYoutubeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleYoutube.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SimpleYoutube";
+			};
+			name = Debug;
+		};
+		ED3F18B22A0244450077777D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jim.hsu.SimpleYoutubeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleYoutube.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SimpleYoutube";
+			};
+			name = Release;
+		};
 		ED448A7A29D31353001C5BA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -529,6 +639,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		ED3F18B02A0244450077777D /* Build configuration list for PBXNativeTarget "SimpleYoutubeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED3F18B12A0244450077777D /* Debug */,
+				ED3F18B22A0244450077777D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ED448A6329D31353001C5BA8 /* Build configuration list for PBXProject "SimpleYoutube" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
