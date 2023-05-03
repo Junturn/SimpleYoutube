@@ -38,7 +38,7 @@ class YoutubeAPI: NSObject {
         }
     }
 
-    func fetchYoutubeData(_ count:Int, nextPageToken: String?, completion: ((Result<(token:String, listArray:[VideoInfo]), Error>) -> Void)?) {
+    func fetchYoutubeData(_ count:Int, nextPageToken: String?, completion: ((Result<(token:String, listArray:[InfoModel]), Error>) -> Void)?) {
         var urlString = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails,status&playlistId=\(playListID)&key=\(apiKey)&maxResults=\(count)"
         if nextPageToken != nil {
             urlString = String.init(format: "%@&pageToken=%@", urlString, nextPageToken!)
@@ -50,14 +50,14 @@ class YoutubeAPI: NSObject {
                             do {
                                 let decoder = JSONDecoder()
                                 let playListItem = try decoder.decode(PlayList.self, from: JSON ?? Data())
-                                var dataArray:[VideoInfo] = []
+                                var dataArray:[InfoModel] = []
                                 for item in playListItem.items {
                                     let time = item.snippet.publishedAt.replacingOccurrences(of: "T", with: " ").replacingOccurrences(of: "Z", with: " ")
-                                    let info = VideoInfo(title: item.snippet.title,
-                                                         imgURL: item.snippet.thumbnails.standard.url,
-                                                         ownerName: item.snippet.videoOwnerChannelTitle,
-                                                         uploadTime: time,
-                                                         videoID: item.snippet.resourceId.videoId)
+                                    let info = InfoModel(title: item.snippet.title,
+                                                          imgURL: item.snippet.thumbnails.standard.url,
+                                                          ownerName: item.snippet.videoOwnerChannelTitle,
+                                                          uploadTime: time,
+                                                          videoID: item.snippet.resourceId.videoId)
                                     dataArray.append(info)
                                 }
                                 completion?(.success((playListItem.nextPageToken, dataArray)))

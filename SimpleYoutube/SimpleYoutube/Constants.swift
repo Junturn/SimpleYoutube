@@ -9,7 +9,7 @@ import Foundation
 
 let channelID = "UC0C-w0YjGpqDXGB8IHb662A"
 let playListID = "UU0C-w0YjGpqDXGB8IHb662A"
-let apiKey = "請填入Youtube API Key"
+let apiKey = "AIzaSyCRJokPAH9hXh7f5ipbL0PTaTDLaf74jPE"
 
 var htmlString = """
 <!DOCTYPE html>

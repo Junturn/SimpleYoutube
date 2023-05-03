@@ -46,6 +46,15 @@ class infoCell: UITableViewCell {
         uploadLabel.isSkeletonable = true
     }
     
+    func setup(_ cellData:InfoModel, row: Int) {
+        ownerLabel.text = cellData.ownerName
+        titleLabel.text = cellData.title
+        uploadLabel.text = cellData.uploadTime
+        coverImageView.image = Path().getImageFromFolder(cellData.videoID)
+        headImageView.image = Path().getImageFromFolder("headImage")
+        self.row = row
+    }
+    
     @objc func checkAction(sender : UITapGestureRecognizer) {
         infoViewTouchDelegate?.nextPage(row!)
     }
